@@ -8,21 +8,24 @@ export default function App() {
   
   const [todos, setTodos] = useState([
     {
+      id: 0,
       text: "Test 1",
       key: 1,
     },
     {
+      id: 1,
       text: "Test 2",
       key: 2,
     },
     {
+      id: 2,
       text: "Test 3",
       key: 3,
     },
   ]);
-  const pressHandler = (key) => {
+  const pressHandler = (id) => {
     setTodos((prev) => {
-      return prev.filter((todo) => todo.key != key);
+      return prev.filter((todo) => todo.id != id);
     });
   };
   const submitHandler = (text) => {
