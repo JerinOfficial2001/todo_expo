@@ -5,22 +5,18 @@ import Inputs from "./components/Inputs";
 import { useState } from "react";
 
 export default function App() {
-  
   const [todos, setTodos] = useState([
     {
       id: 0,
       text: "Test 1",
-      key: 1,
     },
     {
       id: 1,
       text: "Test 2",
-      key: 2,
     },
     {
       id: 2,
       text: "Test 3",
-      key: 3,
     },
   ]);
   const pressHandler = (id) => {
@@ -30,15 +26,15 @@ export default function App() {
   };
   const submitHandler = (text) => {
     setTodos((prev) => {
-      return [{ text: text, key: Math.random().toString() }, ...prev];
+      return [{ text: text, id: Math.random().toString() }, ...prev];
     });
   };
   return (
     <View style={styles.container}>
-      <Text style={styles.header}>TODO</Text>
+      <Text style={styles.header}>TODO LIST</Text>
       <StatusBar style="auto" />
       <View style={styles.body}>
-        <Inputs submitHandler={submitHandler}/>
+        <Inputs submitHandler={submitHandler} />
         {/* <FlatList 
         
         data={todos}
@@ -46,8 +42,8 @@ export default function App() {
           <Card item={item}/>
         )}
         /> */}
-        {todos.map((item, key) => (
-          <Card item={item} key={key} deleteFunction={pressHandler} />
+        {todos.map((item, id) => (
+          <Card item={item} key={id} deleteFunction={pressHandler} />
         ))}
       </View>
     </View>
@@ -57,22 +53,24 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: "black",
     alignItems: "center",
+    position: "relative",
   },
   header: {
-    position: "relative",
     top: 25,
-    backgroundColor: "red",
-    width: "100%",
+    width: "98%",
     textAlign: "center",
     padding: 10,
     fontWeight: "bold",
+    borderRadius: 5,
+    color: "white",
   },
   body: {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
     gap: 5,
+    height: "96%",
   },
 });
