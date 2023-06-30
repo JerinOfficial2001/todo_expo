@@ -1,5 +1,8 @@
 {
   "expo": {
+    "updates": {
+      "url": "https://u.expo.dev/..."
+    },
     "name": "todo-app",
     "slug": "todo-app",
     "version": "1.0.0",
