@@ -42,6 +42,7 @@ export default function App() {
           <Card item={item}/>
         )}
         /> */}
+        
         {todos.map((item, id) => (
           <Card item={item} key={id} deleteFunction={pressHandler} />
         ))}

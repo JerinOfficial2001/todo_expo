@@ -1,20 +1,19 @@
-import { useState } from 'react';
-import { Button, TextInput, TouchableOpacity } from 'react-native';
-import { StyleSheet, Text, View } from 'react-native';
+import { useState } from "react";
+import { Button, TextInput, TouchableOpacity } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 import { MaterialIcons } from "@expo/vector-icons";
 
-
-export default function Inputs({submitHandler}) {
-    const [text, setText] = useState('');
-    const submit = () =>{
-      if(text !==""){
-        submitHandler(text)
-      }
-      setText("")
+export default function Inputs({ submitHandler }) {
+  const [text, setText] = useState("");
+  const submit = () => {
+    if (text !== "") {
+      submitHandler(text);
     }
-    const changeHandler = (val)=>{
-setText(val)
-    }
+    setText("");
+  };
+  const changeHandler = (val) => {
+    setText(val);
+  };
   return (
     <View style={styles.card}>
       <TextInput
@@ -27,12 +26,11 @@ setText(val)
       <TouchableOpacity
         style={styles.button}
         onPress={() => {
-           submit();
+          submit();
         }}
       >
         <MaterialIcons name="add" size={24} color="black" />
       </TouchableOpacity>
-      
     </View>
   );
 }
@@ -47,7 +45,8 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     flexDirection: "row",
     gap: 5,
-   paddingTop:5
+    paddingTop: 5,
+    zIndex: 10,
   },
   input: {
     height: 40,
