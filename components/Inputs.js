@@ -38,17 +38,16 @@ setText(val)
 }
 const styles = StyleSheet.create({
   card: {
-    height: 60,
+    height: 57,
     width: "100%",
     backgroundColor: "#babdc1",
     position: "absolute",
-    bottom: 15,
+    bottom: 20,
     display: "flex",
-    alignItems: "center",
     justifyContent: "center",
     flexDirection: "row",
     gap: 5,
-   
+   paddingTop:5
   },
   input: {
     height: 40,

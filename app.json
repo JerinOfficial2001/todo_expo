@@ -1,22 +1,17 @@
 {
   "expo": {
-    "updates": {
-      "url": "https://u.expo.dev/..."
-    },
-    "name": "todo-app",
-    "slug": "todo-app",
+    "name": "TodoList",
+    "slug": "TodoList",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/LOGO.png",
-    "userInterfaceStyle": "light",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#000000"
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
     },
@@ -34,6 +29,12 @@
       "eas": {
         "projectId": "fcb2dae3-bbe0-4f16-aeaa-3134e103979c"
       }
+    },
+    "runtimeVersion": {
+      "policy": "sdkVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/fcb2dae3-bbe0-4f16-aeaa-3134e103979c"
     }
   }
 }

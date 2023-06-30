@@ -58,13 +58,13 @@ const styles = StyleSheet.create({
     position: "relative",
   },
   header: {
-    top: 25,
-    width: "98%",
+    width: "100%",
     textAlign: "center",
-    padding: 10,
-    fontWeight: "bold",
-    borderRadius: 5,
+    paddingTop: 25,
+    fontWeight: "bold",   
     color: "white",
+    backgroundColor:"red",
+    height:50
   },
   body: {
     display: "flex",

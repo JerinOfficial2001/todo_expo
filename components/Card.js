@@ -1,10 +1,13 @@
-import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 // import * as Icon from "react-icons/ai"
 import { MaterialIcons } from "@expo/vector-icons";
 
 export default function Card({ item, deleteFunction }) {
   return (
     <View style={styles.card}>
+      <View>
+        <Image style={styles.img} source={require("../assets/notes.png")} />
+      </View>
       <View style={styles.header}>
         <Text>{item.text}</Text>
       </View>
@@ -33,21 +36,22 @@ const styles = StyleSheet.create({
     top: 30,
     borderRadius: 5,
     flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-around",
   },
   header: {
     display: "flex",
-    width: "70%",
     height: "100%",
     alignItems: "center",
     justifyContent: "center",
+    width: "60%",
   },
   body: {
     display: "flex",
     flexDirection: "row",
     alignItems: "center",
-    gap: 2,
+    gap: 10,
     height: "100%",
-    width: "30%",
     justifyContent: "center",
   },
   button: {
@@ -55,7 +59,10 @@ const styles = StyleSheet.create({
     flexDirection: "column",
     alignItems: "center",
     height: "100%",
-    width: "50%",
     justifyContent: "center",
+  },
+  img: {
+    height: 40,
+    width: 35,
   },
 });
